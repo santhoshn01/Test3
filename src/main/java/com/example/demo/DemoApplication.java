@@ -1,15 +1,14 @@
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class DemoApplication {
 
-    private static final Logger logger = LoggerFactory.getLogger(DemoApplication.class);
+	public static void main(String[] args) {
+		SpringApplication.run(DemoApplication.class, args);
+        System.out.println("Welcome");
+	}
 
-    public static void main(String[] args) {
-        logger.info("Starting DemoApplication...");
-        SpringApplication.run(DemoApplication.class, args);
-        logger.info("DemoApplication started successfully.");
-    }
-
-}
+} 
