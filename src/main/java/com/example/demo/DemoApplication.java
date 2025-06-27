@@ -9,9 +9,19 @@ public class DemoApplication {
 
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(DemoApplication.class);
-        app.setWebApplicationType(WebApplicationType.SERVLET); // Ensure web server mode
+        app.setWebApplicationType(WebApplicationType.SERVLET); // Starts a web server
         app.run(args);
+
         System.out.println("Welcome");
-        // No sleep or exit here — app stays alive as long as web server runs
+
+        // Sleep for 60 seconds
+        try {
+            Thread.sleep(600000); // 60,000 ms = 60 sec
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            System.out.println("Interrupted during sleep.");
+        }
+
+        System.out.println("Exiting after 60 seconds");
     }
 }
