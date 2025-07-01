@@ -7,8 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
     public static void main(String[] args) throws InterruptedException {
-        
-        // Check if the 'skip.sleep' flag is true
+
         if (!Boolean.getBoolean("skip.sleep")) {
             System.out.println("Sleeping for 10 minutes...");
             Thread.sleep(10 * 60 * 1000); // Sleep for 10 minutes
