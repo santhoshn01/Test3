@@ -13,12 +13,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 class DemoApplicationTests {
 
     static {
-        // Skip sleep logic for both DemoApplication and StartupTask
         System.setProperty("skip.sleep", "true");
     }
 
     @Test
     void contextLoads() {
-        // If the Spring context starts without errors, test passes
+        // Spring context loads successfully
     }
 }
