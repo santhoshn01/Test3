@@ -41,7 +41,7 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
-    jvmArgs "-Dskip.sleep=true"
+    systemProperty 'skip.sleep', 'true'
     reports {
         junitXml.required.set(true)
         junitXml.outputLocation.set(layout.buildDirectory.dir("test-results/test"))
