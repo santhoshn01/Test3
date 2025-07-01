@@ -7,7 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
     webEnvironment = SpringBootTest.WebEnvironment.NONE,
     properties = {
         "spring.application.name=demo",
-        "server.port=0"
+        "server.port=0",
+        "skip.sleep=true"
     }
 )
 class DemoApplicationTests {
