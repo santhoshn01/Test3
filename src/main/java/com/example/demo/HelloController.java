@@ -8,6 +8,6 @@ public class HelloController {
 
     @GetMapping("/")
     public String home() {
-        return "Hello, your Spring Boot app is running on port 8098!";
+        return "Hello, your Spring Boot app is running!";
     }
 }
