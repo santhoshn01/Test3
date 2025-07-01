@@ -1,27 +1,16 @@
-package com.example.demo;
+public static void main(String[] args) {
+    SpringApplication app = new SpringApplication(DemoApplication.class);
+    app.setWebApplicationType(WebApplicationType.SERVLET); // Starts a web server
+    app.run(args);
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.WebApplicationType;
+    System.out.println("Welcome");
 
-@SpringBootApplication
-public class DemoApplication {
-
-    public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(DemoApplication.class);
-        app.setWebApplicationType(WebApplicationType.SERVLET); // Starts a web server
-        app.run(args);
-
-        System.out.println("Welcome");
-
-        // Sleep for 60 seconds
-        try {
-            Thread.sleep(600000); // 60,000 ms = 60 sec
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-            System.out.println("Interrupted during sleep.");
-        }
-
-        System.out.println("Exiting after 60 seconds");
+    try {
+        Thread.sleep(600_000); // 10 minutes sleep
+    } catch (InterruptedException e) {
+        Thread.currentThread().interrupt();
+        System.out.println("Interrupted during sleep.");
     }
+
+    System.out.println("Exiting after 60 seconds");
 }
